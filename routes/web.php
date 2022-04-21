@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ScoreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::inertia('/', 'Home');
+
+Route::post('/scores', [ScoreController::class,'score']);
