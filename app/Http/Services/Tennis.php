@@ -50,9 +50,9 @@ class Tennis
     {
         return match ($playerScore) {
             0 => 'Love',
-            1 => '15',
-            2 => '30',
-            3 => '40',
+            1 => 'Fifteen',
+            2 => 'Thirty',
+            3 => 'Forty',
         };
     }
 
