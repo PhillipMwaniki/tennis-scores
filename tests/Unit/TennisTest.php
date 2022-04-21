@@ -1,6 +1,15 @@
 <?php
 
+namespace Tests\Unit;
+
 use App\Http\Services\Tennis;
+use Pest\Laravel;
+use function Pest\Laravel\get;
+use function Pest\Laravel\json;
+
+test('it has a welcome page', function () {
+    get('/')->assertStatus(200);
+});
 
 test('returns the correct score', function ($player1, $player2, $score) {
 
@@ -21,6 +30,10 @@ test('returns the correct score', function ($player1, $player2, $score) {
     [4, 3, 'Advantage: Player 1'],
     [4, 4, 'Deuce'],
     [5, 5, 'Deuce'],
-    [10, 8, 'Winner: Player 1'],
     [6, 8, 'Winner: Player 2'],
+    [10, 8, 'Winner: Player 1'],
 ]);
+
+test('the request hits the correct endpoint', function() {
+    json('POST', '/scores', ['player1' => 2, 'player2' => 3])->assertStatus(302);
+});
