@@ -6,8 +6,8 @@
             <input type="number" v-model="form.player2" min="0">
             <button type="submit">Get Scores</button>
         </form>
-        <h3>Score</h3>
-        <p>{{ $page.props.flash.score }}</p>
+        <h4 v-if="$page.props.flash.score">Score</h4>
+        <h2>{{ $page.props.flash.score }}</h2>
     </div>
 </template>
 
@@ -22,7 +22,6 @@
                 },
             }
         },
-        props: ['score'],
         methods: {
             getScores() {
                 console.log('post action');
