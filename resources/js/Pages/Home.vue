@@ -11,7 +11,6 @@
                 <div v-if="form.errors.player2">{{ form.errors.player2 }}</div>
             </div>
             <button type="submit">Get Scores</button>
-            <div v-if="form.errors.score">{{ form.errors.score }}</div>
         </form>
         <h4 v-if="$page.props.flash.score">Score</h4>
         <h2>{{ $page.props.flash.score }}</h2>
