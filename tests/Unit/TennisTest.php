@@ -21,4 +21,6 @@ test('returns the correct score', function ($player1, $player2, $score) {
     [4, 3, 'Advantage: Player 1'],
     [4, 4, 'Deuce'],
     [5, 5, 'Deuce'],
+    [10, 8, 'Winner: Player 1'],
+    [6, 8, 'Winner: Player 2'],
 ]);
