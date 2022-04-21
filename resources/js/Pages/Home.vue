@@ -30,7 +30,6 @@ export default {
     },
     methods: {
         getScores() {
-            console.log("post action");
             this.form.post("/scores");
         },
     },
